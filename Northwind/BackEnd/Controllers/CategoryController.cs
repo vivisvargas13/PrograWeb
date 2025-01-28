@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BackEnd.Services.Interfaces;
+using Entities.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,6 +10,13 @@ namespace BackEnd.Controllers
     [ApiController]
     public class CategoryController : ControllerBase
     {
+        ICategoryService _categoryService;
+
+        public CategoryController(ICategoryService categoryService)
+        {
+            _categoryService = categoryService;
+        }
+
         // GET: api/<CategoryController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -24,8 +33,9 @@ namespace BackEnd.Controllers
 
         // POST api/<CategoryController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Category category)
         {
+            _categoryService.AddCategory(category);
         }
 
         // PUT api/<CategoryController>/5

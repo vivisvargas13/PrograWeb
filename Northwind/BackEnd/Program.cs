@@ -1,6 +1,18 @@
+using BackEnd.Services.Implementaciones;
+using BackEnd.Services.Interfaces;
+using DAL.Implementaciones;
+using DAL.Interfaces;
+using Entities.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+#region DI
+builder.Services.AddDbContext<NorthwndContext>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryDAL, CategoryDAL>();
+#endregion
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
