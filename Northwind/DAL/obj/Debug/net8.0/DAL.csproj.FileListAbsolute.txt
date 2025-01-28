@@ -10,3 +10,7 @@ C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\obj\Debug\net8.
 C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\obj\Debug\net8.0\refint\DAL.dll
 C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\obj\Debug\net8.0\DAL.pdb
 C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\obj\Debug\net8.0\ref\DAL.dll
+C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\bin\Debug\net8.0\Entities.dll
+C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\bin\Debug\net8.0\Entities.pdb
+C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Viviana\OneDrive\Documentos\PrograWeb2025\Northwind\DAL\obj\Debug\net8.0\DAL.csproj.Up2Date
