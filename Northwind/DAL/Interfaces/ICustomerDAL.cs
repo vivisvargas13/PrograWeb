@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
-    public interface ICategoryDAL : IDALGenerico<Category>
+    public interface ICustomerDAL: IDALGenerico<Customer>
     {
-        
-
-
     }
 }
