@@ -1,4 +1,5 @@
-﻿using DAL.Interfaces;
+﻿using DAL.Implementations;
+using DAL.Interfaces;
 using Entities.Entities;
 using System;
 using System.Collections.Generic;
@@ -8,40 +9,15 @@ using System.Threading.Tasks;
 
 namespace DAL.Implementaciones
 {
-    public class CategoryDAL : ICategoryDAL
+    public class CategoryDAL : DALGenericoImpl<Category>, ICategoryDAL
     {
         private NorthwndContext _context;
-        public CategoryDAL(NorthwndContext context)
+        public CategoryDAL(NorthwndContext context) : base(context)
         {
-            _context = context;
-        }
-        public bool AddCategory(Category category)
-        {
-            try
             {
-                _context.Add(category);
-                _context.SaveChanges();
-                return true;
+                _context = context;
             }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
 
-        public bool DeleteCategory(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Category> GetCategories()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool UpdateCategory(Category category)
-        {
-            throw new NotImplementedException();
         }
     }
 }

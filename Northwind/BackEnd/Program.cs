@@ -1,6 +1,7 @@
 using BackEnd.Services.Implementaciones;
 using BackEnd.Services.Interfaces;
 using DAL.Implementaciones;
+using DAL.Implementations;
 using DAL.Interfaces;
 using Entities.Entities;
 
@@ -11,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 #region DI
 builder.Services.AddDbContext<NorthwndContext>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IUnidadDeTrabajo, UnidadDeTrabajo>();
 builder.Services.AddScoped<ICategoryDAL, CategoryDAL>();
 #endregion
 

@@ -11,9 +11,9 @@ namespace DAL.Implementations
     public class CustomerDAL: DALGenericoImpl<Customer>, ICustomerDAL
     {
 
-        private NorthWindContext _context;
+        private NorthwndContext _context;
 
-        public CustomerDAL(NorthWindContext context) : base(context)
+        public CustomerDAL(NorthwndContext context) : base(context)
         {
             _context = context;
         }

@@ -12,9 +12,9 @@ namespace DAL.Implementations
     {
         public ICategoryDAL CategoryDAL { get; set; }
        
-        private NorthWindContext _northWindContext;
+        private NorthwndContext _northWindContext;
 
-        public UnidadDeTrabajo(NorthWindContext northWindContext,
+        public UnidadDeTrabajo(NorthwndContext northWindContext,
                         ICategoryDAL categoryDAL
             
                        

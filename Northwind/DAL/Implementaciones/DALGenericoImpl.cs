@@ -12,9 +12,9 @@ namespace DAL.Implementations
     public class DALGenericoImpl<TEntity> : IDALGenerico<TEntity> where TEntity : class
     {
 
-        private NorthWindContext _northWindContext;
+        private NorthwndContext _northWindContext;
 
-        public DALGenericoImpl(NorthWindContext northWindContext)
+        public DALGenericoImpl(NorthwndContext northWindContext)
         {
             
             _northWindContext = northWindContext;

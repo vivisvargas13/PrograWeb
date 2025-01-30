@@ -1,23 +1,35 @@
-﻿using BackEnd.Services.Interfaces;
+﻿using BackEnd.DTO;
+using BackEnd.Services.Interfaces;
+using DAL.Implementations;
 using DAL.Interfaces;
 using Entities.Entities;
 
-namespace BackEnd.Services.Implementaciones
+namespace BackEnd.Services.Implementations
 {
     public class CategoryService : ICategoryService
     {
-        private ICategoryDAL _categoryDAL;
 
-        public CategoryService(ICategoryDAL categoryDAL)
+        IUnidadDeTrabajo _unidadDeTrabajo;
+
+        public CategoryService(IUnidadDeTrabajo unidadDeTrabajo)
         {
-            _categoryDAL = categoryDAL;
-        }
-        public void AddCategory(Category category)
-        {
-            _categoryDAL.AddCategory(category);
+            _unidadDeTrabajo = unidadDeTrabajo;
         }
 
-        public void DeleyeCategory(int id)
+        public void AddCategory(CategoryDTO category)
+        {
+
+            var categoryEntity = new Category()
+            {
+                CategoryName = category.CategoryName
+
+            };
+
+            _unidadDeTrabajo.CategoryDAL.Add(categoryEntity);
+            _unidadDeTrabajo.Complete();
+        }
+
+        public void DeleteCategory(int id)
         {
             throw new NotImplementedException();
         }
@@ -29,7 +41,8 @@ namespace BackEnd.Services.Implementaciones
 
         public void UpdateCategory(Category category)
         {
-            throw new NotImplementedException();
+            _unidadDeTrabajo.CategoryDAL.Update(category);
+            _unidadDeTrabajo.Complete();
         }
     }
 }
