@@ -29,7 +29,7 @@ namespace BackEnd.Services.Implementations
             _unidadDeTrabajo.Complete();
         }
 
-        public void DeleyeCategory(int id)
+        public void DeleteCategory(int id)
         {
             throw new NotImplementedException();
         }

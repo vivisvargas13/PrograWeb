@@ -7,7 +7,7 @@ namespace BackEnd.Services.Interfaces
     {
         void AddCategory(CategoryDTO category);
         void UpdateCategory(Category category);
-        void DeleyeCategory(int id);
+        void DeleteCategory(int id);
         List<Category> GetCategories();
     }
 }
